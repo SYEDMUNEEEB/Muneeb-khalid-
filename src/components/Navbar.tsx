@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowUpRight, Sparkles, Code2 } from 'lucide-react';
 import { CursorState } from '../types';
-import { personalInfo } from '../data/portfolioData';
+import { Avatar } from './Avatar';
 
 interface NavbarProps {
   setCursorState: (state: CursorState) => void;
@@ -73,12 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setCursorState, onOpenAiAssistan
             onMouseLeave={() => setCursorState({ text: '', variant: 'default', active: false })}
           >
             <div className="w-8 h-8 rounded-sm overflow-hidden border border-white/20 transition-transform group-hover:scale-105 shadow-md bg-black shrink-0">
-              <img
-                src={personalInfo.avatar}
-                alt={personalInfo.name}
-                referrerPolicy="no-referrer"
-                className="w-full h-full object-cover"
-              />
+              <Avatar className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold tracking-tight uppercase text-white group-hover:text-indigo-300 transition-colors">

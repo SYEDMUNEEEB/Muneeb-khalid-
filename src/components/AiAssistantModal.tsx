@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Sparkles, Send, Bot, User, Code2 } from 'lucide-react';
 import { CursorState } from '../types';
-import { personalInfo } from '../data/portfolioData';
+import { Avatar } from './Avatar';
 
 interface AiAssistantModalProps {
   isOpen: boolean;
@@ -82,12 +82,7 @@ export const AiAssistantModal: React.FC<AiAssistantModalProps> = ({ isOpen, onCl
           <div className="p-4 sm:p-5 bg-black/90 border-b border-white/10 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-sm overflow-hidden border border-white/20 bg-black shrink-0">
-                <img
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
-                />
+                <Avatar className="w-full h-full object-cover" />
               </div>
               <div>
                 <h3 className="text-base font-bold text-white flex items-center gap-2 tracking-tight">
@@ -118,12 +113,7 @@ export const AiAssistantModal: React.FC<AiAssistantModalProps> = ({ isOpen, onCl
                 >
                   {isAssistant && (
                     <div className="w-8 h-8 rounded-sm overflow-hidden border border-white/20 shrink-0 mt-1 bg-black">
-                      <img
-                        src={personalInfo.avatar}
-                        alt="Muneeb"
-                        referrerPolicy="no-referrer"
-                        className="w-full h-full object-cover"
-                      />
+                      <Avatar alt="Muneeb" className="w-full h-full object-cover" />
                     </div>
                   )}
 

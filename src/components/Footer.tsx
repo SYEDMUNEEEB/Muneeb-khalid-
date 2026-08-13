@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Code2, ArrowUp } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import { Avatar } from './Avatar';
 import { CursorState } from '../types';
 
 interface FooterProps {
@@ -22,12 +23,7 @@ export const Footer: React.FC<FooterProps> = ({ setCursorState }) => {
           <div className="md:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-sm overflow-hidden border border-white/20 shrink-0 bg-black">
-                <img
-                  src={personalInfo.avatar}
-                  alt={personalInfo.name}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover"
-                />
+                <Avatar className="w-full h-full object-cover" />
               </div>
               <span className="font-bold text-white text-lg tracking-tight">
                 Muneeb Khalid

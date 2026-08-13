@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Download, Sparkles, Layers, CheckCircle2 } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import { Avatar } from './Avatar';
 import { ArchitectureVisualizer } from './ArchitectureVisualizer';
 import { CursorState } from '../types';
 
@@ -38,12 +39,7 @@ export const Hero: React.FC<HeroProps> = ({ setCursorState, onOpenAiAssistant })
             <div className="flex items-center gap-4 mb-6">
               <div className="relative group">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg overflow-hidden border-2 border-white/20 p-0.5 bg-gradient-to-br from-indigo-500/30 via-white/10 to-indigo-900/40 shadow-xl group-hover:border-indigo-400 transition-all duration-300">
-                  <img
-                    src={personalInfo.avatar}
-                    alt={personalInfo.name}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <Avatar className="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-black/90 rounded-full border border-white/20 flex items-center justify-center">
                   <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>

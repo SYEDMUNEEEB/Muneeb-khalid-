@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Layers, ArrowRight, CheckCircle2, Cpu, Code2, Database, Server, Terminal, ShieldCheck, Zap, Award, Github, Linkedin, Mail } from 'lucide-react';
 import { processSteps, personalInfo } from '../data/portfolioData';
+import { Avatar } from './Avatar';
 import { CursorState } from '../types';
 
 interface AboutProps {
@@ -40,12 +41,7 @@ export const About: React.FC<AboutProps> = ({ setCursorState }) => {
             <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10 shadow-2xl backdrop-blur-md relative overflow-hidden group">
               <div className="flex items-center gap-4">
                 <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-md overflow-hidden border border-white/20 shrink-0 bg-black shadow-lg">
-                  <img
-                    src={personalInfo.avatar}
-                    alt={personalInfo.name}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
+                  <Avatar className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white tracking-tight">{personalInfo.name}</h3>

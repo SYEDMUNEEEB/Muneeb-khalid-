@@ -3,6 +3,7 @@ import { Project, SkillItem, ExperienceItem, CapabilityItem, ProcessStep, Servic
 export const personalInfo = {
   name: "Muneeb Khalid",
   avatar: "/muneeb.jpg",
+  avatarFallback: "/avatar.svg",
   primaryTitle: "Full-Stack Developer",
   secondaryTitle: "Building scalable web applications, SaaS platforms & digital products.",
   bio: "I design and develop modern web applications, SaaS platforms, analytics systems, and mobile experiences — from system architecture and APIs to polished user interfaces and production cloud deployment.",

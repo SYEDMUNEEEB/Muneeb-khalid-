@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Send, Mail, Linkedin, Github, CheckCircle2, AlertCircle, Sparkles, ArrowRight, MessageSquare, ShieldCheck } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { personalInfo } from '../data/portfolioData';
+import { Avatar } from './Avatar';
 import { ContactSubmission, CursorState } from '../types';
 
 interface ContactSectionProps {
@@ -102,12 +103,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ setCursorState, 
               {/* Contact Profile Header */}
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-md overflow-hidden border border-white/20 shrink-0 bg-black shadow-lg">
-                  <img
-                    src={personalInfo.avatar}
-                    alt={personalInfo.name}
-                    referrerPolicy="no-referrer"
-                    className="w-full h-full object-cover"
-                  />
+                  <Avatar className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h3 className="text-base font-bold text-white tracking-tight">{personalInfo.name}</h3>
